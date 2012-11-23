@@ -1,0 +1,18 @@
+<div id = "container">
+<h1> Create a New Resume! </h1>
+<%= form_for :resume do |f| %>
+	<div class = "field">
+	<%=f.label :name, "Resume Name" %>
+	<%=f.text_field :name %> </br>
+	e.g. Application for Google
+	</div>
+	<div class = "field">
+	<%=f.label :description, "Position" %>
+	<%=f.text_field :description, class: 'span4'%> </br>
+	e.g. Web Developer </br>
+	</div>
+	
+	<%=f.submit "Create Resume", :class => "btn btn-info" %>
+	
+<%end%>
+</div>

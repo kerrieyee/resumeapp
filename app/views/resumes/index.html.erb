@@ -1,0 +1,16 @@
+<div id = "container">
+<h1> Resumes </h1>
+
+<%= button_to "Create a New Resume", { 
+	:controller => "resumes",
+	:action => "new"}, 
+	{:class => "btn btn-info", :method => :get} %>
+
+
+<% if @resumes.class != NilClass %>
+	<% @resumes.each do |resume|%>
+		<h2><%= resume.title %></h2>
+		<%= resume.description %> </br>
+	<%end%>
+<%end%>
+</div>

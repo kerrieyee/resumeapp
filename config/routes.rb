@@ -1,4 +1,7 @@
 Myapp::Application.routes.draw do
+
+  root :to => "resumes#index"
+  resources :resumes
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
